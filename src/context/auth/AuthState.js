@@ -35,7 +35,6 @@ const AuthState = (props) => {
     }
 
     const res = await axios.get(`${API_URL}api/auth`);
-    // const res = await axios.get(`${CORS_URL}/${API_URL}api/auth`);
 
     try {
       dispatch({
@@ -56,11 +55,7 @@ const AuthState = (props) => {
     };
 
     try {
-      const res = await axios.post(
-        `${CORS_URL}${API_URL}/api/users`,
-        formData,
-        config
-      );
+      const res = await axios.post(`${API_URL}/api/users`, formData, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -85,11 +80,7 @@ const AuthState = (props) => {
     };
 
     try {
-      const res = await axios.post(
-        `${CORS_URL}${API_URL}/api/auth`,
-        formData,
-        config
-      );
+      const res = await axios.post(`${API_URL}/api/auth`, formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,
