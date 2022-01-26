@@ -13,7 +13,7 @@ import {
   LOGOUT,
   CLEAR_ERRORS,
 } from "../types";
-import { API_URL, CORS_URL } from "../../util/apiUrl";
+import { API_URL } from "../../util/apiUrl";
 
 const AuthState = (props) => {
   const initialState = {
@@ -34,7 +34,8 @@ const AuthState = (props) => {
       setAuthToken(userToken);
     }
 
-    const res = await axios.get(`${CORS_URL}/${API_URL}api/auth`);
+    const res = await axios.get(`${API_URL}api/auth`);
+    // const res = await axios.get(`${CORS_URL}/${API_URL}api/auth`);
 
     try {
       dispatch({
