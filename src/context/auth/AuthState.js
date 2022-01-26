@@ -34,7 +34,7 @@ const AuthState = (props) => {
       setAuthToken(userToken);
     }
 
-    const res = await axios.get(`${API_URL}api/auth`);
+    const res = await axios.get(`${API_URL}/api/auth`);
 
     try {
       dispatch({
