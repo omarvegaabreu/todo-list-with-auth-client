@@ -41,6 +41,7 @@ const TodoState = (props) => {
   const addTodo = async (todo) => {
     const config = {
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-type": "application/json",
       },
     };
@@ -67,6 +68,7 @@ const TodoState = (props) => {
   const updateTodo = async (todo) => {
     const config = {
       headers: {
+        "Access-Control-Allow-Origin": "*",
         "Content-type": "application/json",
       },
     };
