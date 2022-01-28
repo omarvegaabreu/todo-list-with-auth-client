@@ -36,7 +36,7 @@ const AuthState = (props) => {
 
     const res = await axios.get(`${API_URL}/api/auth`, {
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-type": "application/json",
       },
     });
 
@@ -54,8 +54,7 @@ const AuthState = (props) => {
   const registerUser = async (formData) => {
     const config = {
       headers: {
-        // "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-type": "application/json",
       },
     };
 
@@ -80,7 +79,7 @@ const AuthState = (props) => {
   const loginUser = async (formData) => {
     const config = {
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-type": "application/json",
       },
     };
 
