@@ -46,7 +46,7 @@ const TodoState = (props) => {
     };
 
     try {
-      const res = await axios.post(`${API_URL}api/todos`, todo, config);
+      const res = await axios.post(`${API_URL}/api/todos`, todo, config);
       dispatch({ type: ADD_TODO, payload: res.data });
     } catch (error) {
       dispatch({ type: TODOS_ERROR, payload: error.response.msg });
@@ -56,7 +56,7 @@ const TodoState = (props) => {
   //Delete todo
   const deleteTodo = async (id) => {
     try {
-      await axios.delete(`${API_URL}api/todos/${id}`);
+      await axios.delete(`${API_URL}/api/todos/${id}`);
       dispatch({ type: DELETE_TODO, payload: id });
     } catch (error) {
       dispatch({ type: TODOS_ERROR, payload: error.response.msg });
@@ -78,7 +78,7 @@ const TodoState = (props) => {
 
     try {
       const res = await axios.put(
-        `${API_URL}api/todos/${todo._id}`,
+        `${API_URL}/api/todos/${todo._id}`,
         todo,
         config
       );
