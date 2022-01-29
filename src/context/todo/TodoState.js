@@ -41,7 +41,7 @@ const TodoState = (props) => {
   const addTodo = async (todo) => {
     const config = {
       headers: {
-        "Content-type": "application/x-www-form-urlencoded",
+        "Content-type": "application/json",
       },
     };
 
