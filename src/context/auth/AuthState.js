@@ -53,6 +53,7 @@ const AuthState = (props) => {
   //register user POST
   const registerUser = async (formData) => {
     const config = {
+      method: "POST",
       headers: {
         "Content-type": "application/json",
       },
@@ -78,6 +79,7 @@ const AuthState = (props) => {
   //login user
   const loginUser = async (formData) => {
     const config = {
+      method: "POST",
       headers: {
         "Content-type": "application/json",
       },
