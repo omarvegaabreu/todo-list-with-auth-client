@@ -34,7 +34,7 @@ const AuthState = (props) => {
       setAuthToken(userToken);
     }
 
-    const res = await axios.get(`${API_URL}/api/auth`, {
+    const res = await axios.get(`${API_URL}api/auth`, {
       headers: {
         "Content-type": "application/json",
       },
@@ -59,7 +59,7 @@ const AuthState = (props) => {
     };
 
     try {
-      const res = await axios.post(`${API_URL}/api/users`, formData, config);
+      const res = await axios.post(`${API_URL}api/users`, formData, config);
 
       dispatch({
         type: REGISTER_SUCCESS,
@@ -84,7 +84,7 @@ const AuthState = (props) => {
     };
 
     try {
-      const res = await axios.post(`${API_URL}/api/auth`, formData, config);
+      const res = await axios.post(`${API_URL}api/auth`, formData, config);
 
       dispatch({
         type: LOGIN_SUCCESS,
