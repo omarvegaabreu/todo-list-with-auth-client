@@ -37,7 +37,6 @@ const AuthState = (props) => {
     const res = await axios.get(`${API_URL}api/auth`, {
       headers: {
         "Content-type": "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
     });
 
@@ -56,7 +55,6 @@ const AuthState = (props) => {
     const config = {
       headers: {
         "Content-type": "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
     };
 
@@ -82,7 +80,6 @@ const AuthState = (props) => {
     const config = {
       headers: {
         "Content-type": "application/json",
-        "Access-Control-Allow-Origin": "*",
       },
     };
 
