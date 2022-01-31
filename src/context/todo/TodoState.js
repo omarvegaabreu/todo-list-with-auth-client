@@ -40,6 +40,7 @@ const TodoState = (props) => {
   //Add todo
   const addTodo = async (todo) => {
     const config = {
+      mode: "cors",
       headers: {
         "Content-type": "application/json",
       },
@@ -66,6 +67,7 @@ const TodoState = (props) => {
   //update todo
   const updateTodo = async (todo) => {
     const config = {
+      mode: "cors",
       headers: {
         "Content-type": "application/json",
       },

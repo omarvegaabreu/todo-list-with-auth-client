@@ -35,6 +35,7 @@ const AuthState = (props) => {
     }
 
     const res = await axios.get(`${API_URL}/api/auth`, {
+      mode: "cors",
       headers: {
         "Content-type": "application/json",
       },
@@ -53,7 +54,7 @@ const AuthState = (props) => {
   //register user POST
   const registerUser = async (formData) => {
     const config = {
-      method: "POST",
+      mode: "cors",
       headers: {
         "Content-type": "application/json",
       },
@@ -79,7 +80,7 @@ const AuthState = (props) => {
   //login user
   const loginUser = async (formData) => {
     const config = {
-      method: "POST",
+      mode: "cors",
       headers: {
         "Content-type": "application/json",
       },
